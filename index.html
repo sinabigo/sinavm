@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="refresh" content="0; url=sing-box://import-remote-profile?url=https://drive.google.com/uc?export=view&id=1qUt9w0TzocLzQ5fikHxpS90T3Sg5S3DU&export=view#@𝗦𝗶𝗡𝗔𝗩𝗠👈🏻کانال تلگرام" />
+    <meta http-equiv="refresh" content="0; url=sing-box://import-remote-profile?url=https://drive.google.com/uc?id=1qUt9w0TzocLzQ5fikHxpS90T3Sg5S3DU&export=view#@𝗦𝗶𝗡𝗔𝗩𝗠👈🏻کانال تلگرام" />
     <title>پنل کانال تلگرامی SiNAVM</title>
     <style>
+        /* تنظیمات کلی */
         body {
             font-family: 'Tahoma', sans-serif;
             text-align: center;
@@ -132,7 +133,7 @@
     </div>
     <h1>در حال انتقال کانفیگ...</h1>
     <p>اگر انتقال خودکار انجام نشد، روی لینک زیر کلیک کنید:</p>
-    <a class="redirect-link" href="sing-box://import-remote-profile?url=https://drive.google.com/uc?export=view&id=1qUt9w0TzocLzQ5fikHxpS90T3Sg5S3DU&export=view#@𝗦𝗶𝗡𝗔𝗩𝗠👈🏻کانال تلگرام">
+    <a class="redirect-link" href="sing-box://import-remote-profile?url=https://drive.google.com/uc?id=1qUt9w0TzocLzQ5fikHxpS90T3Sg5S3DU&export=view#@𝗦𝗶𝗡𝗔𝗩𝗠👈🏻کانال تلگرام">
         ورود به پروفایل Sing-Box
     </a>
 
@@ -158,6 +159,7 @@
         localStorage.setItem("visitCount", visits);
         document.getElementById("user-visit-count").innerText = visits;
 
+        // دریافت بازدید کل از سرور
         fetch('https://page-views.count1.workers.dev')
             .then(response => response.text())
             .then(data => {
