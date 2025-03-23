@@ -158,7 +158,6 @@
         localStorage.setItem("visitCount", visits);
         document.getElementById("user-visit-count").innerText = visits;
 
-        // دریافت بازدید کل از سرور
         fetch('https://page-views.count1.workers.dev')
             .then(response => response.text())
             .then(data => {
