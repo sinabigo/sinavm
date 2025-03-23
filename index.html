@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="0; url=sing-box://import-remote-profile?url=https://drive.google.com/uc?export=view&id=1qUt9w0TzocLzQ5fikHxpS90T3Sg5S3DU&export=view#@𝗦𝗶𝗡𝗔𝗩𝗠👈🏻کانال تلگرام" />
+    <title>پنل کانال تلگرامی SiNAVM</title>
+    <style>
+        /* تنظیمات کلی */
+        body {
+            font-family: 'Tahoma', sans-serif;
+            text-align: center;
+            direction: rtl;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* استایل لینک اصلی */
+        .redirect-link {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00d9ff;
+            text-decoration: none;
+            transition: 0.3s;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .redirect-link:hover {
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(0, 217, 255, 0.8);
+        }
+
+        /* استایل هدر */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            max-width: 80px;
+            margin-left: 10px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .header {
+            font-size: 26px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: #ffcc00;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+            color: #ffd700;
+        }
+
+        /* استایل دکمه تلگرام */
+        .telegram-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 25px;
+            background: linear-gradient(135deg, #00d9ff, #0088cc);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.6);
+            transition: 0.3s;
+        }
+        .telegram-box:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.9);
+        }
+        .telegram-box img {
+            width: 32px;
+            height: 32px;
+        }
+
+        /* استایل باکس‌های بازدید */
+ */
+        .visit-container {
+            margin-top: 30px;
+            width: 90%;
+            max-width: 400px;
+        }
+        .visit-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin-top: 15px;
+            font-size: 22px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 
+                        -5px -5px 15px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .visit-box:hover {
+            transform: scale(1.05);
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5), 
+                        -5px -5px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        /* استایل فوتر */
+        .footer {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+        .footer a {
+            color: #00d9ff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+        <div class="header">
+             پنل اختصاصی سینگ باکس
+            <a href="https://T.me/sinavm" target="_blank">SiNAVM</a>
+        </div>
+    </div>
+    <h1>در حال انتقال کانفیگ...</h1>
+    <p>اگر انتقال خودکار انجام نشد، روی لینک زیر کلیک کنید:</p>
+    <a class="redirect-link" href="sing-box://import-remote-profile?url=https://drive.google.com/uc?export=view&id=1qUt9w0TzocLzQ5fikHxpS90T3Sg5S3DU&export=view#@𝗦𝗶𝗡𝗔𝗩𝗠👈🏻کانال تلگرام">
+        ورود به پروفایل Sing-Box
+    </a>
+
+    <div class="visit-container">
+        <div class="visit-box">
+            بازدید شما: <span id="user-visit-count">0</span>
+        </div>
+        <div class="visit-box">
+            بازدید کل: <span id="total-visit-count">...</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        طراحی توسط <a href="https://T.me/SinaVM" target="_blank">@SiNAVM</a>
+    </div>
+    <a class="telegram-box" href="https://T.me/sinavm" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram Logo">
+        کانال تلگرام
+    </a>
+    <script>
+        // شمارش بازدید کاربر در لوکال استوریج
+        let visits = localStorage.getItem("visitCount") || 0;
+        visits++;
+        localStorage.setItem("visitCount", visits);
+        document.getElementById("user-visit-count").innerText = visits;
+
+        // دریافت بازدید کل از سرور
+        fetch('https://page-views.count1.workers.dev')
+            .then(response => response.text())
+            .then(data => {
+                let countElement = document.getElementById("total-visit-count");
+                if (countElement) {
+                    countElement.innerText = data;
+                } else {
+                    console.error("Error updating total visit count.");
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching total visit count:", error);
+            });
+    </script>
+
+</body>
+</html>
